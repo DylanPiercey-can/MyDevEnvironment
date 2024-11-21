@@ -7,7 +7,12 @@ local keymap = vim.keymap -- for easy use
 -- General Keymap 
 -- i for insert mode
 keymap.set("i", "jk", "<ESC>")
+
+-- move right one step with kk (--INSERT--)
 keymap.set("i", "kk", "<Right>")
+
+-- move left one step with jj (--INSERT--)
+keymap.set("i", "jj", "<Left>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
