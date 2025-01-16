@@ -106,20 +106,22 @@ return packer.startup(function(use)
   use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
-  -- treesitter configuration
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  })
+    -- treesitter configuration
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        run = function()
+        local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+        ts_update()
+        end,
+    })
 
-   -- git integration
-  use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+    -- git integration
+    use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+    -- Transparent background
+    use("xiyaowong/transparent.nvim")
 
-  if packer_bootstrap then
+      if packer_bootstrap then
     require("packer").sync()
   end
 end)

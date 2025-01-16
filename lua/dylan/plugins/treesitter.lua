@@ -10,8 +10,15 @@ treesitter.setup({
   highlight = {
     enable = true,
   },
-  -- enable indentation
-  indent = { enable = true },
+   
+indent = {
+    enable = true,
+    disable = { "java" },
+  },  
+    
+  -- enable indentation [Nov25/24 - Changed to False (to solve java indentation)]
+  --indent = { enable = true },    - Uncomment for original
+
   -- enable autotagging (w/ nvim-ts-autotag plugin)
   autotag = { enable = true },
   -- ensure these language parsers are installed
