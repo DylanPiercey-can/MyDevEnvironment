@@ -1,3 +1,11 @@
+
+
+-- New Set up -> Feb 27 2025
+vim.cmd("let g:netrw_liststyle = 3") 
+
+
+
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
