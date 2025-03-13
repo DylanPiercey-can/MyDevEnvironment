@@ -36,6 +36,9 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "clangd", -- ✅ C Language Server
+        "jdtls", -- ✅ Java Language Server
+        "texlab", -- ✅ LaTeX LSP
       },
       automatic_installation = true,
     })
@@ -48,6 +51,18 @@ return {
         "black", -- python formatter
         "pylint",
         "eslint_d",
+        mason_tool_installer.setup({
+          ensure_installed = {
+            "prettier",
+            "stylua",
+            "isort",
+            "black",
+            "pylint",
+            "eslint_d",
+            "latexindent", -- ✅ LaTeX formatter
+            "chktex", -- ✅ LaTeX linter
+          },
+        }),
       },
     })
   end,
