@@ -21,13 +21,17 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
       },
+      -- The format selected is not working for my taste.
+      -- Setting fallback to false to prevent auto save formatting
+      -- April 9 2025*
       format_on_save = {
-        lsp_fallback = true,
+        lsp_fallback = false,
         async = false,
         timeout_ms = 1000,
       },
     })
 
+    -- Keeping this for now incase I want to clean up a complete mess fast.. also April 9 2025
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
       conform.format({
         lsp_fallback = true,
